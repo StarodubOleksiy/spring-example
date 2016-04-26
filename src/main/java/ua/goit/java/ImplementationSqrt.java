@@ -7,7 +7,11 @@ import CalculatorLibrary.*;
 public class ImplementationSqrt implements Calculator {
    public String calculate(String input) throws Exception
    {
-       System.out.println("Implementation sqrt");
-     return input;
+    if(!new StringToNumberValidator().isValid(input))
+        throw new Exception();
+       String result = new String();
+       result+= Math.sqrt(Double.parseDouble(input));
+
+     return result;
    }
 }

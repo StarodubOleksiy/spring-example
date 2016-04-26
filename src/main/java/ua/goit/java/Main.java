@@ -52,7 +52,11 @@ public class Main {
                 } else if (calculateString.contains("sqrt"))
                 {
                     calculator = new ImplementationSqrt();
-                    String result =  calculator.calculate(calculateString);
+                    System.out.println("Enter the value you want to find sqrt: ");
+                    String valueToSqrt = br.readLine();
+                    String result =  calculator.calculate(valueToSqrt);
+                    calculateString+=" ";
+                    calculateString+=valueToSqrt;
                     this.showResult(calculateString,result);
                 }   else if(!calculateString.equals("exit"))
                     throw new Exception();
@@ -71,7 +75,7 @@ public class Main {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("application-context.xml");
        Main main = applicationContext.getBean("main",Main.class);
-        main.execute();
+         main.execute();
 
     }
 
