@@ -55,7 +55,7 @@ public class Main {
                     System.out.println("Enter the value you want to find sqrt: ");
                     String valueToSqrt = br.readLine();
                     String result =  calculator.calculate(valueToSqrt);
-                    calculateString+=" ";
+                    calculateString+=" ";//
                     calculateString+=valueToSqrt;
                     this.showResult(calculateString,result);
                 }   else if(!calculateString.equals("exit"))
