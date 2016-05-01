@@ -13,10 +13,9 @@ import CalculatorLibrary.*;
 public class AppConfig {//
 
     @Bean
-    public Main main(/*ExecutorFactory executorFactory, */Calculator calculator)
+    public Main main(Calculator calculator)
     {
         Main main = new Main();
-      //  main.setExecutorFactory(executorFactory);
         main.setCalculator(calculator);
         return main;
     }
